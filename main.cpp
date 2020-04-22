@@ -10,7 +10,7 @@ int main(int argc, char **argv){
 
 	cout    << "Log parser application for logs provided by WM_Adjust.exe\n"
             << "\t(The application for calibration & testing of Water Meters).\n"
-            << "Author: ghennadii.gubceac@addgrup.com\n\n";
+            << "Author: gghennadii\n\n";
 
 	cout    << "(!)Please clean the log file first!\n"
             << "1. Ensure there are only compleated calibration points measurements\n"
