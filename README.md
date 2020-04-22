@@ -2,6 +2,10 @@
 
 source: https://github.com/burakbugrul/NginxLogParser 
 
+This tiny code was write to parse a specific multiline log in order to facilitate data analyses.
+It will collect a block of CALIB_ITER_NR records for each counter and TestBench.
+Sure it needs improvements such as additional filters, verifications and cleaning. It's far from ideal but it does its work.
+
 ## Compile
 
 ```
@@ -39,25 +43,25 @@ Please enter path of the output file: <output file>
 07-04-2020 16:38:18:988 	Get TestBench Flowrate: 44.100l/h
 07-04-2020 16:38:20:176 	Get TestBench Temperature: 13.500°C
 07-04-2020 16:38:20:363 	Get TestBench Flowrate: 44.100l/h
-07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 52.978l/h, Counter ID: 295245
-07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 295245
-07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.316l/h, Counter ID: 295245
-07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.181l/h, Counter ID: 295245
-07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.013l/h, Counter ID: 295245
-07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.245l/h, Counter ID: 295225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.007l/h, Counter ID: 295225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.314l/h, Counter ID: 295225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.093l/h, Counter ID: 295225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 295225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 52.978l/h, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.316l/h, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.181l/h, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.013l/h, Counter ID: 5245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.245l/h, Counter ID: 5225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.007l/h, Counter ID: 5225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.314l/h, Counter ID: 5225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.093l/h, Counter ID: 5225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 5225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
 The End!
 ```
