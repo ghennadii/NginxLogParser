@@ -1,6 +1,6 @@
 # WMAdjustLogParser
 
-# source: https://github.com/burakbugrul/NginxLogParser 
+source: https://github.com/burakbugrul/NginxLogParser 
 
 ## Compile
 
