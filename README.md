@@ -65,7 +65,7 @@ Please enter path of the output file: <output file>
 07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 3225
 The End!
 ```
-will convert into:
+will convert to CSV:
 ```
 1	13.5	44.1	0	52.978	5245	0	54.245	3225
 2	13.5	44.01	0	53.287	5245	0	53.007	3225
