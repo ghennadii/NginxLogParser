@@ -25,3 +25,39 @@ $ ./parser
 Please enter path of the log file: <input file>
 Please enter path of the output file: <output file>
 ```
+
+# The sample of log file
+
+```
+07-04-2020 16:38:14:677 	Get TestBench Temperature: 13.500°C
+07-04-2020 16:38:14:864 	Get TestBench Flowrate: 44.100l/h
+07-04-2020 16:38:16:051 	Get TestBench Temperature: 13.500°C
+07-04-2020 16:38:16:239 	Get TestBench Flowrate: 44.010l/h
+07-04-2020 16:38:17:426 	Get TestBench Temperature: 13.500°C
+07-04-2020 16:38:17:614 	Get TestBench Flowrate: 44.010l/h
+07-04-2020 16:38:18:801 	Get TestBench Temperature: 13.500°C
+07-04-2020 16:38:18:988 	Get TestBench Flowrate: 44.100l/h
+07-04-2020 16:38:20:176 	Get TestBench Temperature: 13.500°C
+07-04-2020 16:38:20:363 	Get TestBench Flowrate: 44.100l/h
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 52.978l/h, Counter ID: 295245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 295245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.316l/h, Counter ID: 295245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.181l/h, Counter ID: 295245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.013l/h, Counter ID: 295245
+07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.245l/h, Counter ID: 295225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.007l/h, Counter ID: 295225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.314l/h, Counter ID: 295225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.093l/h, Counter ID: 295225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 295225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: -1951525916
+The End!
+```
