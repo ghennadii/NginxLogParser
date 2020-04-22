@@ -14,6 +14,7 @@ $ g++ main.cpp WMAdjustLogParser.cpp -std=c++14 -O2 -o parser
 ```
 $ ./parser <input-file> <output-file>
 ```
+```
 $ ./parser <input-file>
 ```
 or
