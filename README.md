@@ -53,15 +53,24 @@ Please enter path of the output file: <output file>
 07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
 07-04-2020 16:38:24:128 	Get Saved Counter Flowrate: 53.013l/h, Counter ID: 5245
 07-04-2020 16:38:24:128 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.245l/h, Counter ID: 5225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.007l/h, Counter ID: 5225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.314l/h, Counter ID: 5225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.093l/h, Counter ID: 5225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
-07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 5225
-07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 5245
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.245l/h, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.007l/h, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.314l/h, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 54.093l/h, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Flowrate: 53.287l/h, Counter ID: 3225
+07-04-2020 16:38:24:425 	Get Saved Counter Temperature: 0.000°C, Counter ID: 3225
 The End!
+```
+will convert into:
+```
+1	13.5	44.1	0	52.978	5245	0	54.245	3225
+2	13.5	44.01	0	53.287	5245	0	53.007	3225
+3	13.5	44.01	0	53.316	5245	0	53.314	3225
+4	13.5	44.1	0	53.181	5245	0	54.093	3225
+5	13.5	44.1	0	53.013	5245	0	53.287	3225
+Read 31 lines!								
 ```
