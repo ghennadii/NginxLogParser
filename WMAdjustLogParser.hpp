@@ -47,7 +47,7 @@ typedef struct {
     uint8_t WM_flow_idx[MAX_COUNTERS_NR];
 } points_idx_t;
 
-class NginxParser{
+class LogParser{
 
 	int lines=0, valid_lines=0, counters=0, TB_flows=0, TB_temp=0, counters_flows=0, counters_temp=0;
 	ifstream input;
@@ -72,7 +72,7 @@ class NginxParser{
         void print_export();
 
 	public:
-		NginxParser(string input, string output);
+		LogParser(string input, string output);
 		void parse();
 };
 #endif

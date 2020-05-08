@@ -4,7 +4,7 @@
 //#define SEP_CH                  "\t"
 #define SEP_CH                  ","
 
-NginxParser::NginxParser(string input_file, string output_file){
+LogParser::LogParser(string input_file, string output_file){
 	input.open(input_file);
 	output.open(output_file);
 
@@ -18,6 +18,18 @@ NginxParser::NginxParser(string input_file, string output_file){
 	    return;
 	}
 
+	// Print the header
+	output  << "Nr." << SEP_CH
+            << "TB_temp(C)" << SEP_CH
+            << "TB_flow(L/h)" << SEP_CH;
+    for (uint8_t WM_idx = 0; WM_idx < MAX_COUNTERS_NR; WM_idx++){
+        output  << "WM_temp(C)" << SEP_CH
+                << "WM_flow(L/h)" << SEP_CH
+                << "Error(%)" << SEP_CH
+                << "WM_ID" << SEP_CH;
+    }
+    output  << "\n";
+
 	for (uint8_t WM_idx = 0; WM_idx < MAX_COUNTERS_NR; WM_idx++){
         check_WM_state |= WM_STATE(WM_idx);
     }
@@ -25,7 +37,7 @@ NginxParser::NginxParser(string input_file, string output_file){
 
 using namespace std;
 
-void NginxParser::parse(){
+void LogParser::parse(){
 
     string line;
 
@@ -99,7 +111,7 @@ void NginxParser::parse(){
 	input.close();
 }
 
-bool NginxParser::try_TBTemp(string &line, float &value){
+bool LogParser::try_TBTemp(string &line, float &value){
     bool line_corresponds = false;
     string string2find = "Get TestBench Temperature:";
     size_t pos = 0;
@@ -115,7 +127,7 @@ bool NginxParser::try_TBTemp(string &line, float &value){
     return line_corresponds;
 };
 
-bool NginxParser::try_TBFlow(string &line, float &value){
+bool LogParser::try_TBFlow(string &line, float &value){
     bool line_corresponds = false;
     string string2find = "Get TestBench Flowrate:";
     size_t pos = 0;
@@ -131,7 +143,7 @@ bool NginxParser::try_TBFlow(string &line, float &value){
     return line_corresponds;
 };
 
-bool NginxParser::try_WMTemp(string &line, float &value, uint32_t &WMID){
+bool LogParser::try_WMTemp(string &line, float &value, uint32_t &WMID){
     bool line_corresponds = false;
     string string2find = "Get Saved Counter Temperature:";
     string string2findCounter = "Counter ID:";
@@ -150,7 +162,7 @@ bool NginxParser::try_WMTemp(string &line, float &value, uint32_t &WMID){
     return line_corresponds;
 };
 
-bool NginxParser::try_WMFlow(string &line, float &value, uint32_t &WMID){
+bool LogParser::try_WMFlow(string &line, float &value, uint32_t &WMID){
     bool line_corresponds = false;
     string string2find = "Get Saved Counter Flowrate:";
     string string2findCounter = "Counter ID:";
@@ -169,7 +181,7 @@ bool NginxParser::try_WMFlow(string &line, float &value, uint32_t &WMID){
     return line_corresponds;
 };
 
-uint8_t NginxParser::locateWMinTable(const uint32_t WM_ID){
+uint8_t LogParser::locateWMinTable(const uint32_t WM_ID){
     uint8_t WM_idx;
     for (WM_idx = 0; WM_idx < MAX_COUNTERS_NR; WM_idx++){
         if (WM_ID == WM_IDs[WM_idx]){
@@ -183,7 +195,7 @@ uint8_t NginxParser::locateWMinTable(const uint32_t WM_ID){
     return WM_TABLE_FULL;
 }
 
-bool NginxParser::try_print_export(){
+bool LogParser::try_print_export(){
     bool export_log = false;
 
     if (1 == collection_state.TB_flow_ok
@@ -209,7 +221,7 @@ bool NginxParser::try_print_export(){
     return export_log;
 }
 
-void NginxParser::print_export(){
+void LogParser::print_export(){
     for (uint8_t idx = 0; idx < CALIB_ITER_NR; idx++){
         valid_lines ++;
         output  << valid_lines << SEP_CH
@@ -218,6 +230,7 @@ void NginxParser::print_export(){
         for (uint8_t WM_idx = 0; WM_idx < MAX_COUNTERS_NR; WM_idx++){
             output  << calibration_Point[idx].counter_data[WM_idx].WM_temp << SEP_CH
                     << calibration_Point[idx].counter_data[WM_idx].WM_flow << SEP_CH
+                    << SEP_CH
                     << WM_IDs[WM_idx] << SEP_CH;
         }
         output  << "\n";

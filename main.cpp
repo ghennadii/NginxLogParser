@@ -38,11 +38,10 @@ int main(int argc, char **argv){
 		cout << "Output file: " << output_file << endl;
 	}
 
-    WMAdjustLogParser parser(input_file.c_str(), output_file.c_str());
+    LogParser parser(input_file.c_str(), output_file.c_str());
     parser.parse();
 
     system("pause");
-    std::getchar();
 
 	return 0;
 }
